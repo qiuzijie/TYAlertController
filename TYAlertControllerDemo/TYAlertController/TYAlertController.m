@@ -166,7 +166,7 @@
     }
     _backgroundView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view insertSubview:_backgroundView atIndex:0];
-    [self.view addConstraintToView:_backgroundView edgeInset:UIEdgeInsetsZero];
+    [self.view addConstraintToView:_backgroundView edgeInset:UIEdgeInsetsMake(0, 0, -_actionSheetStyleBottomEdging, 0)];
 }
 
 - (void)setBackgroundView:(UIView *)backgroundView
@@ -176,7 +176,7 @@
     } else if (_backgroundView != backgroundView) {
         backgroundView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.view insertSubview:backgroundView aboveSubview:_backgroundView];
-        [self.view addConstraintToView:backgroundView edgeInset:UIEdgeInsetsZero];
+        [self.view addConstraintToView:backgroundView edgeInset:UIEdgeInsetsMake(0, 0, -_actionSheetStyleBottomEdging, 0)];
         backgroundView.alpha = 0;
         [UIView animateWithDuration:0.3 animations:^{
             backgroundView.alpha = 1;
