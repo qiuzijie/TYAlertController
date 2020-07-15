@@ -102,6 +102,7 @@
     }]];
     
     TYAlertController *alertController = [TYAlertController alertControllerWithAlertView:alertView preferredStyle:TYAlertControllerStyleActionSheet];
+    alertController.actionSheetStyleBottomEdging = 80;
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
